@@ -1,0 +1,94 @@
+###
+POST http://127.0.0.1:8000/api/register/
+Content-Type: application/json
+
+{
+    "username" : "akhil",
+    "email" : "akhil007@gmail.com",
+    "password" : "akhil@453"
+}
+
+###
+POST http://127.0.0.1:8000/api/register/
+Content-Type: application/json
+
+{
+    "username" : "arjun",
+    "email" : "arjun@gmail.com",
+    "password" : "arjun123"
+}
+
+
+###
+POST http://127.0.0.1:8000/api/login/
+Content-Type: application/json
+
+{
+    "username" : "arjun",
+    "password" : "arjun123"
+}
+
+###
+POST http://127.0.0.1:8000/api/students/
+Content-Type: application/json
+Authorization: Token fc5aa2d00da1a0aec83d57acba21cfcdb51b83aa
+
+{
+    "name" : "anandhu ravi",
+    "roll_number" : "23",
+    "course" : "llb",
+    "age" : 22,
+    "place" : "kochi"
+}
+
+
+
+###
+POST http://127.0.0.1:8000/api/students/
+Content-Type: application/json
+Authorization: Token 81c12e1acf4f8ff8272e6e3d7662e588db4f988b
+
+{
+    "name" : "amal r",
+    "roll_number" : "12",
+    "course" : "mba",
+    "age" : 21,
+    "place" : "kochi"
+}
+
+
+
+###
+GET http://127.0.0.1:8000/api/students/
+Authorization: Token fc5aa2d00da1a0aec83d57acba21cfcdb51b83aa
+
+### user 1
+GET http://127.0.0.1:8000/api/students/1/
+Authorization: Token fc5aa2d00da1a0aec83d57acba21cfcdb51b83aa
+
+### user 2
+GET http://127.0.0.1:8000/api/students/2/
+Authorization: Token 81c12e1acf4f8ff8272e6e3d7662e588db4f988b
+
+
+###
+PUT http://127.0.0.1:8000/api/students/1/
+Content-Type: application/json
+Authorization: Token fc5aa2d00da1a0aec83d57acba21cfcdb51b83aa
+
+{
+    "name" : "anandhu ravi",
+    "roll_number" : "23",
+    "course" : "MCA",
+    "age" : 22,
+    "place" : "kochi"
+}
+
+
+###
+DELETE http://127.0.0.1:8000/api/students/1/
+Authorization: Token fc5aa2d00da1a0aec83d57acba21cfcdb51b83aa
+
+###
+POST http://127.0.0.1:8000/api/logout/
+Authorization: Token fc5aa2d00da1a0aec83d57acba21cfcdb51b83aa
